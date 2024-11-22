@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class ProfileHeader extends StatelessWidget {
   final String imageUrl;
@@ -33,7 +33,7 @@ class ProfileHeader extends StatelessWidget {
             const SizedBox(height: 6),
             Text(
               name,
-              style: GoogleFonts.roboto(
+              style: TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.w400,
               ),

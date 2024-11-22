@@ -3,6 +3,7 @@ import 'widgets/recipe_card.dart';
 import 'widgets/navigation_bar.dart';
 import 'widgets/profile_header.dart';
 
+
 class RecipeSuggestionsScreen extends StatelessWidget {
   const RecipeSuggestionsScreen({Key? key}) : super(key: key);
 
@@ -32,7 +33,7 @@ class RecipeSuggestionsScreen extends StatelessWidget {
                   ),
                   child: Text(
                     'Maybe you want...',
-                    style: GoogleFonts.cormorantGaramond(
+                    style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.w700,
                     ),

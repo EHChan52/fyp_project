@@ -20,17 +20,36 @@ class CustomNavigationBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          for (int i = 1; i <= 5; i++)
-            Semantics(
-              label: 'Navigation button $i',
-              button: true,
-              child: Image.network(
-                'http://b.io/ext_${i + 4}-',
-                width: 32,
-                height: 32,
-                fit: BoxFit.contain,
-              ),
-            ),
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.pushNamed(context, '/');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.people_alt),
+            onPressed: () {
+              Navigator.pushNamed(context, '/search');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.chat),
+            onPressed: () {
+              Navigator.pushNamed(context, '/favorites');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.shop),
+            onPressed: () {
+              Navigator.pushNamed(context, '/favorites');
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.person),
+            onPressed: () {
+              Navigator.pushNamed(context, '/profile');
+            },
+          ),
         ],
       ),
     );

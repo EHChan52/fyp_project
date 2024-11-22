@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class RecipeCard extends StatelessWidget {
   final String imageUrl;
@@ -43,7 +43,7 @@ class RecipeCard extends StatelessWidget {
             const SizedBox(height: 7),
             Text(
               description,
-              style: GoogleFonts.roboto(
+              style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
               ),
