@@ -18,15 +18,15 @@ class CommunityScreen extends StatelessWidget {
             child: Container(
               constraints: const BoxConstraints(maxWidth: 480),
               margin: const EdgeInsets.symmetric(horizontal: 16),
-              child: Column(
+              child: const Column(
                 children: [
-                  const SizedBox(height: 62),
-                  const SectionHeader(title: 'Community'),
-                  const SizedBox(height: 13),
-                  const SearchBar1(),
-                  const SizedBox(height: 15),
-                  const SectionHeader(title: 'Daily Deal'),
-                  const SizedBox(height: 14),
+                  SizedBox(height: 62),
+                  SectionHeader(title: 'Community'),
+                  SizedBox(height: 13),
+                  SearchBar1(),
+                  SizedBox(height: 15),
+                  SectionHeader(title: 'Daily Deal'),
+                  SizedBox(height: 14),
                   Row(
                     children: [
                       Expanded(
@@ -38,7 +38,7 @@ class CommunityScreen extends StatelessWidget {
                           imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/9be4c22c350f32693813bbf361a1b38f0702d540deb10adbca79d1a57b909b77?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                         ),
                       ),
-                      const SizedBox(width: 20),
+                      SizedBox(width: 20),
                       Expanded(
                         child: DealCard(
                           title: '25% Off!!!',
@@ -50,9 +50,9 @@ class CommunityScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 22),
-                  const SectionHeader(title: 'Recommended'),
-                  const SizedBox(height: 14),
+                  SizedBox(height: 22),
+                  SectionHeader(title: 'Recommended'),
+                  SizedBox(height: 14),
                   Row(
                     children: [
                       Expanded(
@@ -64,7 +64,7 @@ class CommunityScreen extends StatelessWidget {
                           imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/10dc49e5acdb7e6106ee59b1a3a97ff94af3d90ce9cb2ebb5cb7791fd3364d50?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                         ),
                       ),
-                      const SizedBox(width: 20),
+                      SizedBox(width: 20),
                       Expanded(
                         child: DealCard(
                           location: 'Tai Po 5',
@@ -74,8 +74,8 @@ class CommunityScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 85),
-                  const CustomNavigationBar(),
+                  SizedBox(height: 85),
+                  CustomNavigationBar(),
                 ],
               ),
             ),
