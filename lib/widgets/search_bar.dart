@@ -26,12 +26,14 @@ class SearchBar1 extends StatelessWidget {
               ),
             ),
           ),
-          Image.network(
-            'https://cdn.builder.io/api/v1/image/assets/TEMP/09b9e9fe92b751dfdca7b22d3e906e571f3d4bad7d782e30211b6d5bbf2de6b3?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-            width: 23,
-            height: 23,
-            semanticLabel: 'Search icon',
-          ),
+            IconButton(
+            icon: Icon(Icons.search),
+            iconSize: 23,
+            onPressed: () {
+              // Add your search action here
+            },
+            tooltip: 'Search',
+            ),
         ],
       ),
     );

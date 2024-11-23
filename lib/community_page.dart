@@ -59,7 +59,7 @@ class CommunityScreen extends StatelessWidget {
                         child: DealCard(
                           title: 'Vegetarian',
                           location: 'ShaTin 6',
-                          originalPrice: '200',
+                          originalPrice: '1200',
                           discountedPrice: '1500',
                           imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/10dc49e5acdb7e6106ee59b1a3a97ff94af3d90ce9cb2ebb5cb7791fd3364d50?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                         ),

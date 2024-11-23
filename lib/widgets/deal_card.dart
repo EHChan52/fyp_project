@@ -12,7 +12,7 @@ class DealCard extends StatelessWidget {
     this.title = '',
     required this.location,
     this.originalPrice = '',
-    required this.discountedPrice,
+    this.discountedPrice = '',
     required this.imageUrl,
   }) : super(key: key);
 
@@ -82,8 +82,8 @@ class DealCard extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 7),
-                Image.network(
-                  'https://cdn.builder.io/api/v1/image/assets/TEMP/4da606160a69e115d2e747b064f596abca741160ba20af37889645e0ea44c0b8?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                Image.asset(
+                  'assets/Token.png',
                   width: 28,
                   height: 25,
                   semanticLabel: 'Currency icon',

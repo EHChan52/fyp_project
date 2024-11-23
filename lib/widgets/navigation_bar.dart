@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_project/chatbot_page.dart';
+import 'package:fyp_project/community_page.dart';
+import 'package:fyp_project/shopping_page.dart';
+import 'package:fyp_project/user_home_page.dart';
+import 'package:fyp_project/profile_page.dart';
 
 class CustomNavigationBar extends StatelessWidget {
   const CustomNavigationBar({Key? key}) : super(key: key);
@@ -23,31 +28,46 @@ class CustomNavigationBar extends StatelessWidget {
           IconButton(
             icon: const Icon(Icons.home),
             onPressed: () {
-              Navigator.pushNamed(context, '/');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
             },
           ),
           IconButton(
             icon: const Icon(Icons.people_alt),
             onPressed: () {
-              Navigator.pushNamed(context, '/search');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => CommunityScreen()),
+                );
             },
           ),
           IconButton(
             icon: const Icon(Icons.chat),
             onPressed: () {
-              Navigator.pushNamed(context, '/favorites');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ChatScreen()),
+                );
             },
           ),
           IconButton(
             icon: const Icon(Icons.shop),
             onPressed: () {
-              Navigator.pushNamed(context, '/favorites');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ShopScreen()),
+                );
             },
           ),
           IconButton(
             icon: const Icon(Icons.person),
             onPressed: () {
-              Navigator.pushNamed(context, '/profile');
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => ProfileScreen()),
+                );
             },
           ),
         ],

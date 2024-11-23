@@ -4,13 +4,13 @@ import 'widgets/navigation_bar.dart';
 import 'widgets/profile_header.dart';
 
 
-class RecipeSuggestionsScreen extends StatelessWidget {
-  const RecipeSuggestionsScreen({Key? key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: 'Recipe Suggestions Screen',
+      label: 'HomeScreen',
       child: Container(
         color: const Color(0xFFF0F0F0),
         child: SafeArea(
