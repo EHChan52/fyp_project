@@ -70,7 +70,7 @@ class TokensScreen extends StatelessWidget {
                     location: '18888 Coins',
                     originalPrice: '999',
                     discountedPrice: '648',
-                    imageUrl: 'assets/deal_image.png',
+                    imageUrl: 'assets/648token.jpeg',
                   ),
                   DealCard(
                     title: 'Once a lifetime !!!',

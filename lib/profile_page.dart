@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
 import 'personal_info_page.dart';
+import 'token_page.dart';
+import 'history_page.dart';
+import 'issue_page.dart';
+import 'hdp_page.dart';
+import 'nutrition_page.dart';
 
 import 'widgets/profile_header.dart';
 import 'widgets/menu_item.dart';
@@ -41,27 +46,52 @@ class ProfileScreen extends StatelessWidget {
                 MenuItem(
                   icon: 'assets/HDP.png',
                   title: 'Health & Dietary Preferences',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HealthProfileScreen()),
+                    );
+                  },
                 ),
                 MenuItem(
                   icon: 'assets/NutritionalRequirements.png', 
                   title: 'Nutritional Requirements',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => NutritionalRequirementsScreen()),
+                    );
+                  },
                 ),
                 MenuItem(
                   icon: 'assets/Token.png',
                   title: 'Tokens',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TokensScreen()),
+                    );
+                  },
                 ),
                 MenuItem(
                   icon: 'assets/History.png',
                   title: 'History',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TransactionHistoryScreen()),
+                    );
+                  },
                 ),
                 MenuItem(
                   icon: 'assets/ReportIssue.png',
                   title: 'Report Issue',
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ReportIssueScreen()),
+                    );
+                  },
                 ),
                 MenuItem(
                   icon: 'assets/Setting.png',
