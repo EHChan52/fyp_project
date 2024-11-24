@@ -25,12 +25,18 @@ class HeaderWidget extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-          Image.asset(
-            'assets/ShoppingCart.png',
-            width: 32,
-            height: 32,
-            semanticLabel: 'Green Market Logo',
-          ),
+            IconButton(
+            icon: Image.asset(
+              'assets/ShoppingCart copy.png',
+              width: 32,
+              height: 32,
+              semanticLabel: 'Green Market Logo',
+            ),
+            onPressed: () {
+              // Add your onPressed code here!
+
+            },
+            ),
         ],
       ),
     );
