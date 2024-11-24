@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_project/item1.dart';
 
 class DealCard extends StatelessWidget {
   final String title;
@@ -33,6 +34,10 @@ class DealCard extends StatelessWidget {
       child: TextButton(
       onPressed: () {
         // Define your onPressed action here
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const VeggieDetailsScreen()),
+          );
       },
       child: Column(
         mainAxisSize: MainAxisSize.max,

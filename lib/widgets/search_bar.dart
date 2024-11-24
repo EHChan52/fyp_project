@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_project/dinner_page.dart';
 
 class SearchBar1 extends StatelessWidget {
   const SearchBar1({super.key});
@@ -31,6 +32,10 @@ class SearchBar1 extends StatelessWidget {
             iconSize: 23,
             onPressed: () {
               // Add your search action here
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const DinnerEventScreen()),
+                );
             },
             tooltip: 'Search',
             ),
