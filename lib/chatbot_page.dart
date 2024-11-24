@@ -39,12 +39,12 @@ class ChatScreen extends StatelessWidget {
                 ),
               ],
             ),
-            Positioned(
+            const Positioned(
               bottom: 0,
               left: 0,
               right: 0,
               child: Column(
-                children: const [
+                children: [
                   SearchBar1(),
                   CustomNavigationBar(),
                 ],
