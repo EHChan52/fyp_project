@@ -36,8 +36,8 @@ class TokensScreen extends StatelessWidget {
                             fontWeight: FontWeight.w600,
                           ),
                         ),
-                        Image.asset(
-                          'assets/back_icon.png',
+                        Image.network(
+                          'https://cdn.builder.io/api/v1/image/assets/TEMP/41d21b220054fec39098ba01055e48db5f1ab6f77fbceeb65e1fbc1dcd1d9f52?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                           width: 48,
                           height: 48,
                         ),
@@ -70,14 +70,14 @@ class TokensScreen extends StatelessWidget {
                     location: '18888 Coins',
                     originalPrice: '999',
                     discountedPrice: '648',
-                    imageUrl: 'assets/648token.jpeg',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e621e9b6a90527dec4a9737d95e4c5b8bd369aef316aaa482c4c339e8ce097cc?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                   DealCard(
                     title: 'Once a lifetime !!!',
                     location: '3000 Coins/Month',
                     originalPrice: '500',
                     discountedPrice: '350',
-                    imageUrl: 'assets/PI.png',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b902992b0b957a819ba8b62c96d464c49880781e51123f732fe4a40959aec660?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                 ],
               ),
@@ -88,12 +88,12 @@ class TokensScreen extends StatelessWidget {
                   DealCard(
                     location: '2000 Coins',
                     discountedPrice: '200',
-                    imageUrl: 'assets/PI.png',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/a2ac4ffca1d4b4c98a25dc6b934b23ef3038b069c26cab7cb4ec341bfe4181d7?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                   DealCard(
                     location: '1400 Coins',
                     discountedPrice: '120',
-                    imageUrl: 'assets/token_image_2.png',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/0369b7ce4a850763133e619886fb74adc0c3f1dcf91e858f96f40de3cb80e4b9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                 ],
               ),
@@ -104,12 +104,12 @@ class TokensScreen extends StatelessWidget {
                   DealCard(
                     location: '800 Coins',
                     discountedPrice: '75',
-                    imageUrl: 'assets/PI.png',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b6d737788b435298d0d5f7d63967d726a6d020e2798eaadcc94598d5b7d39085?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                   DealCard(
                     location: '200 Coins',
                     discountedPrice: '20',
-                    imageUrl: 'assets/PI.png',
+                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b69e1b33efba6ebcce34e625126eaf84a7db1194508dba60c4e28940e47414c1?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                   ),
                 ],
               ),
