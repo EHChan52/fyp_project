@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 
 class DealCard extends StatelessWidget {
   final String title;
-  final String location;
+  final String itemName;
   final String originalPrice;
   final String discountedPrice;
   final String imageUrl;
 
   const DealCard({
     super.key,
-    this.title = '',
-    required this.location,
+    this.title = '  ',
+    required this.itemName,
     this.originalPrice = '',
     this.discountedPrice = '',
     required this.imageUrl,
@@ -31,6 +31,7 @@ class DealCard extends StatelessWidget {
         ],
       ),
       child: Column(
+        mainAxisSize: MainAxisSize.max,
         children: [
           if (title.isNotEmpty)
             Padding(
@@ -47,11 +48,11 @@ class DealCard extends StatelessWidget {
           Image.network(
             imageUrl,
             width: 180,
-            height: 142,
-            semanticLabel: 'Deal image for $location',
+            height: 145,
+            semanticLabel: 'Deal image for $itemName',
           ),
           Text(
-            location,
+            itemName,
             style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w700,
@@ -65,18 +66,25 @@ class DealCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (originalPrice.isNotEmpty)
                   Text(
                     originalPrice,
-                    style: const TextStyle(fontSize: 12),
+                    style: TextStyle(fontSize: 12,
+                    decoration: discountedPrice.isNotEmpty
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none,
+                    ),
+                    
                   ),
                 const SizedBox(width: 7),
                 Text(
                   discountedPrice,
-                  style: const TextStyle(
-                    color: Colors.red,
+                  style: TextStyle(
+                    color: originalPrice.isNotEmpty
+                      ? Colors.red
+                      : Colors.black,
                     fontSize: 28,
                     fontWeight: FontWeight.w700,
                   ),
