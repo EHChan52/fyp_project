@@ -10,11 +10,11 @@ class ChatMessages extends StatelessWidget {
         children: const [
           _BotMessage(
             message: "Hi~ Hi~ I am your AI chatbot~ You can ask me anything related to health! Aha! I am your super \"healthman\"!!",
-            imagePath: "assets/bot_avatar.png",
+            imagePath: "assets/veggie.png",
           ),
           _UserMessage(
             message: "I ate two eggs and 80 grams of bread in the morning. What should I eat for lunch?",
-            imagePath: "assets/user_avatar.png",
+            imagePath: "assets/ProfileImg.jpeg",
           ),
           _BotMessage(
             message: "Okay! Based on your body data, here are some lunch suggestions to ensure a balanced diet:\n\n"
@@ -22,7 +22,7 @@ class ChatMessages extends StatelessWidget {
                 "Carbohydrates: Choose whole grains like brown rice, whole wheat bread, or sweet potatoes. For instance, 150-200 grams of brown rice or a medium-sized sweet potato.\n\n"
                 "Vegetables: How about broccoli, carrots, or spinach? You could prepare a large bowl of salad with olive oil and lemon juice dressing.\n\n"
                 "I hope these suggestions are helpful for you! How do you think these options sound?",
-            imagePath: "assets/bot_avatar.png",
+            imagePath: "assets/veggie.png",
           ),
         ],
       ),
@@ -35,7 +35,6 @@ class _BotMessage extends StatelessWidget {
   final String imagePath;
 
   const _BotMessage({
-    super.key,
     required this.message,
     required this.imagePath,
   });
@@ -85,7 +84,6 @@ class _UserMessage extends StatelessWidget {
   final String imagePath;
 
   const _UserMessage({
-    super.key,
     required this.message,
     required this.imagePath,
   });

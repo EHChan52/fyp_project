@@ -33,17 +33,17 @@ class HealthProfileScreen extends StatelessWidget {
                 ListItem(
                   title: "Disease",
                   value: "0",
-                  iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/16985cb8cf7e8dd5cb8a87d78f657858c3d408ebcdbf25cf46dea1e0fd0300e9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc",
+                  iconUrl: "assets/Forward.png",
                 ),
                 ListItem(
                   title: "Medication",
                   value: "No",
-                  iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/16985cb8cf7e8dd5cb8a87d78f657858c3d408ebcdbf25cf46dea1e0fd0300e9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc",
+                  iconUrl: "assets/Forward.png",
                 ),
                 ListItem(
                   title: "Allergies",
                   value: "0",
-                  iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/16985cb8cf7e8dd5cb8a87d78f657858c3d408ebcdbf25cf46dea1e0fd0300e9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc",
+                  iconUrl: "assets/Forward.png",
                 ),
                 SectionHeader(
                   title: "Dietary Preference",
@@ -52,7 +52,7 @@ class HealthProfileScreen extends StatelessWidget {
                 ListItem(
                   title: "Favorites",
                   value: "5",
-                  iconUrl: "https://cdn.builder.io/api/v1/image/assets/TEMP/16985cb8cf7e8dd5cb8a87d78f657858c3d408ebcdbf25cf46dea1e0fd0300e9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc",
+                  iconUrl: "assets/Forward.png",
                 ),
               ],
             ),

@@ -77,7 +77,7 @@ class TokensScreen extends StatelessWidget {
                     location: '3000 Coins/Month',
                     originalPrice: '500',
                     discountedPrice: '350',
-                    imageUrl: 'assets/lifetime_image.png',
+                    imageUrl: 'assets/PI.png',
                   ),
                 ],
               ),
@@ -88,7 +88,7 @@ class TokensScreen extends StatelessWidget {
                   DealCard(
                     location: '2000 Coins',
                     discountedPrice: '200',
-                    imageUrl: 'assets/token_image_1.png',
+                    imageUrl: 'assets/PI.png',
                   ),
                   DealCard(
                     location: '1400 Coins',
@@ -104,12 +104,12 @@ class TokensScreen extends StatelessWidget {
                   DealCard(
                     location: '800 Coins',
                     discountedPrice: '75',
-                    imageUrl: 'assets/token_image_3.png',
+                    imageUrl: 'assets/PI.png',
                   ),
                   DealCard(
                     location: '200 Coins',
                     discountedPrice: '20',
-                    imageUrl: 'assets/token_image_4.png',
+                    imageUrl: 'assets/PI.png',
                   ),
                 ],
               ),

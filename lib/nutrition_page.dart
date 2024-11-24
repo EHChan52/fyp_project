@@ -28,8 +28,15 @@ class NutritionalRequirementsScreen extends StatelessWidget {
                       description: 'According to your data, you need more:',
                     ),
               SizedBox(height: 13),
-
-
+              RecipeCard(
+                      imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/8775dc8c77fa035e108c8134932909648efe21334c020302061932d844d40d97?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                      description: 'Protein',
+                    ),
+              SizedBox(height: 13),
+              RecipeCard(
+                      imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/08c821bb94a438020847ff5d26f226c73b9d71a62133c1646de73f6b4fa25b76?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                      description: 'Dietary Fiber',
+                    ),
               Spacer(),
             ],
           ),

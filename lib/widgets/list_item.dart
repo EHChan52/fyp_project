@@ -45,7 +45,7 @@ class ListItem extends StatelessWidget {
                 ),
               ),
               const SizedBox(width: 12),
-              Image.network(
+              Image.asset(
                 iconUrl,
                 width: 28,
                 height: 28,

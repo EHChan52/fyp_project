@@ -56,8 +56,8 @@ class TransactionCard extends StatelessWidget {
                 const SizedBox(height: 4),
                 Row(
                   children: [
-                    Image.network(
-                      'https://cdn.builder.io/api/v1/image/assets/TEMP/66c5dc4cd500c7257ea029b173c8432cb5c4e37af6e59cf0df3cfe9a64207cbd?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                    Image.asset(
+                      'assets/calendar.png',
                       width: 21,
                       height: 21,
                     ),
@@ -77,8 +77,8 @@ class TransactionCard extends StatelessWidget {
           ),
           Row(
             children: [
-              Image.network(
-                'https://cdn.builder.io/api/v1/image/assets/TEMP/e8af101cabb71c419822ea0015b6ef0c7b2cba9421b23c59cadf7f131460ae34?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+              Image.asset(
+                'assets/Token.png',
                 width: 28,
                 height: 28,
               ),

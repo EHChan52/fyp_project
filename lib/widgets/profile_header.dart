@@ -24,8 +24,8 @@ class ProfileHeader extends StatelessWidget {
               child: ClipOval(
                 child: Image.network(
                   imageUrl,
-                  width: 100,
-                  height: 100,
+                  width: 50,
+                  height: 50,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -34,7 +34,7 @@ class ProfileHeader extends StatelessWidget {
             Text(
               name,
               style: const TextStyle(
-                fontSize: 34,
+                fontSize: 20,
                 fontWeight: FontWeight.w400,
               ),
               semanticsLabel: 'User name: $name',

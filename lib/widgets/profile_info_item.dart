@@ -46,8 +46,8 @@ class ProfileInfoItem extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(width: 12),
-                Image.network(
-                  'https://cdn.builder.io/api/v1/image/assets/TEMP/16985cb8cf7e8dd5cb8a87d78f657858c3d408ebcdbf25cf46dea1e0fd0300e9?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                Image.asset(
+                  'assets/Forward.png',
                   width: 28,
                   height: 28,
                   semanticLabel: 'Edit icon',
