@@ -12,9 +12,30 @@ class SignUpScreen extends StatefulWidget {
 
 class _SignUpScreenState extends State<SignUpScreen> {
   final _formKey = GlobalKey<FormState>();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _confirmPasswordController = TextEditingController();
   bool _isPasswordVisible = false;
   bool _isConfirmPasswordVisible = false;
 
+  void _signUp() {
+    if (_formKey.currentState!.validate()) {
+      // Simulate successful registration
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Sign up successful!'),
+          backgroundColor: Colors.green,
+        ),
+      );
+
+      // Navigate to the login page
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => LoginScreen()),
+      );
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,8 +58,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                 ),
                 const SizedBox(height: 33),
                 TextFormField(
+                  controller: _usernameController,
                   decoration: InputDecoration(
                     hintText: 'Enter your username',
+                    hintStyle: const TextStyle(
+                      color: Colors.black54,
+                    ),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -54,13 +79,24 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your username';
                     }
+                    if (value.length < 3 || value.length > 20) {
+                      return 'Username must be between 3 and 20 characters';
+                    }
+                    final usernameRegex = RegExp(r'^[a-zA-Z0-9_]+$');
+                    if (!usernameRegex.hasMatch(value)) {
+                        return 'Username can only contain letters, numbers, and _';
+                    }
                     return null;
                   },
                 ),
                 const SizedBox(height: 29),
                 TextFormField(
+                  controller: _emailController,
                   decoration: InputDecoration(
                     hintText: 'Enter your email',
+                    hintStyle: const TextStyle(
+                      color: Colors.black54,
+                    ),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -77,13 +113,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter your email';
                     }
+                    // Use regular expression to check email format
+                    final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+');
+                    if (!emailRegex.hasMatch(value)) {
+                      return 'Please enter a valid email address';
+                    }
                     return null;
                   },
                 ),
                 const SizedBox(height: 29),
                 TextFormField(
+                  controller: _passwordController,
                   decoration: InputDecoration(
                     hintText: 'Enter password',
+                    hintStyle: const TextStyle(
+                      color: Colors.black54,
+                    ),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -115,13 +160,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Please enter a password';
                     }
+                    if (value.length < 8) {
+                      return 'Password must be at least 8 characters long';
+                    }
                     return null;
                   },
                 ),
                 const SizedBox(height: 29),
                 TextFormField(
+                  controller: _confirmPasswordController,
                   decoration: InputDecoration(
                     hintText: 'Confirm password',
+                    hintStyle: const TextStyle(
+                          color: Colors.black54,
+                        ),
                     filled: true,
                     fillColor: Colors.white,
                     border: OutlineInputBorder(
@@ -153,22 +205,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     if (value == null || value.isEmpty) {
                       return 'Please confirm your password';
                     }
+                    if (value != _passwordController.text) {
+                      return 'Passwords do not match';
+                    }
+
                     return null;
                   },
                 ),
                 const SizedBox(height: 45),
                 ElevatedButton(
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // Handle sign up logic
-                        ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('Sign up successful!'),
-                          backgroundColor: Colors.green,
-                        ),
-                        );
-                    }
-                  },
+                  onPressed: _signUp,
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF21BBCC),
                     minimumSize: const Size(double.infinity, 52),
