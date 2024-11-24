@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'widgets/profile_info_item.dart';
 
 class PIScreen extends StatelessWidget {
-  const PIScreen({Key? key}) : super(key: key);
+  const PIScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

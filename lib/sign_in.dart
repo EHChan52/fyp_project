@@ -5,7 +5,7 @@ import 'user_home_page.dart';
 import 'sign_up.dart';
 
 class LoginScreen extends StatefulWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+  const LoginScreen({super.key});
 
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -33,7 +33,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(height: 173),
-                    Text(
+                    const Text(
                       'Welcome Back!',
                       style: TextStyle(
                         fontSize: 34,
@@ -42,9 +42,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       semanticsLabel: 'Welcome Back heading',
                     ),
                     const SizedBox(height: 20),
-                    CircleAvatar(
+                    const CircleAvatar(
                       radius: 91,
-                      backgroundImage: const NetworkImage('https://cdn.builder.io/api/v1/image/assets/TEMP/dd02faba8d4e8af9ebd295fc4b97caa03596bda2c4fcdc1b847ecc81ba97f43f?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
+                      backgroundImage: NetworkImage('https://cdn.builder.io/api/v1/image/assets/TEMP/dd02faba8d4e8af9ebd295fc4b97caa03596bda2c4fcdc1b847ecc81ba97f43f?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
                       backgroundColor: Colors.transparent,
                     ),
                     const SizedBox(height: 12),
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       controller: _emailController,
                       decoration: InputDecoration(
                         hintText: 'Enter your email/username',
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           fontSize: 15,
                           color: Colors.black54,
                         ),
@@ -82,7 +82,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       obscureText: _obscurePassword,
                       decoration: InputDecoration(
                         hintText: 'Enter password',
-                        hintStyle: TextStyle(
+                        hintStyle: const TextStyle(
                           fontSize: 15,
                           color: Colors.black54,
                         ),
@@ -124,7 +124,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           // Handle sign in logic
                           Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => HomeScreen()),
+                          MaterialPageRoute(builder: (context) => const HomeScreen()),
                           );
                         }
                       },
@@ -135,7 +135,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         minimumSize: const Size(double.infinity, 52),
                       ),
-                      child: Text(
+                      child: const Text(
                         'Sign In',
                         style: TextStyle(
                           fontSize: 24,
@@ -154,12 +154,12 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Forgot Password?',
                         style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
-                          color: const Color(0xFF21BBCC),
+                          color: Color(0xFF21BBCC),
                         ),
                       ),
                     ),
@@ -182,7 +182,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               ..onTap = () {
                               Navigator.push(
                                 context,
-                                MaterialPageRoute(builder: (context) => SignUpScreen()),
+                                MaterialPageRoute(builder: (context) => const SignUpScreen()),
                                 );
                               },
                             ),

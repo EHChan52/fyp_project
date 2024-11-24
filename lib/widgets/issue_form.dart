@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class IssueForm extends StatelessWidget {
-  const IssueForm({Key? key}) : super(key: key);
+  const IssueForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class IssueForm extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               color: const Color(0x7240E1CD),
             ),
-            child: Text(
+            child: const Text(
               'Report an issue',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -73,7 +73,7 @@ class IssueForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: const Color(0x7240E1CD),
           ),
-          child: Text(
+          child: const Text(
             'Upload Image',
             textAlign: TextAlign.center,
             style: TextStyle(
@@ -118,7 +118,7 @@ class IssueForm extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Text(
+          const Text(
             'Submit',
             style: TextStyle(
               fontSize: 36,

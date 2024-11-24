@@ -5,7 +5,7 @@ import '../widgets/deal_card.dart';
 import '../widgets/navigation_bar.dart';
 
 class ShopScreen extends StatelessWidget {
-  const ShopScreen({Key? key}) : super(key: key);
+  const ShopScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +15,15 @@ class ShopScreen extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(maxWidth: 480),
           margin: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
+          child: const Column(
             children: [
-              const SizedBox(height: 61),
-              const HeaderWidget(),
-              const SizedBox(height: 14),
-              const SearchBar1(),
-              const SizedBox(height: 18),
+              SizedBox(height: 61),
+              HeaderWidget(),
+              SizedBox(height: 14),
+              SearchBar1(),
+              SizedBox(height: 18),
               Row(
-                children: const [
+                children: [
                   Expanded(
                     child: DealCard(
                       title: 'Broccoli',
@@ -43,9 +43,9 @@ class ShopScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 24),
+              SizedBox(height: 24),
               Row(
-                children: const [
+                children: [
                   Expanded(
                     child: DealCard(
                       title: 'Carrots',
@@ -63,9 +63,9 @@ class ShopScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 22),
+              SizedBox(height: 22),
               Row(
-                children: const [
+                children: [
                   Expanded(
                     child: DealCard(
                       title: 'Blueberry',
@@ -83,8 +83,8 @@ class ShopScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(height: 16),
-              const CustomNavigationBar(),
+              SizedBox(height: 16),
+              CustomNavigationBar(),
             ],
           ),
         ),

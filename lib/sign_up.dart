@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'sign_in.dart';
 
 class SignUpScreen extends StatefulWidget {
-  const SignUpScreen({Key? key}) : super(key: key);
+  const SignUpScreen({super.key});
 
   @override
   _SignUpScreenState createState() => _SignUpScreenState();
@@ -27,7 +27,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   'Hello!',
                   style: TextStyle(
                     fontSize: 34,
@@ -204,7 +204,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ..onTap = () {
                           Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => LoginScreen()),
+                            MaterialPageRoute(builder: (context) => const LoginScreen()),
                             );
                           },
                         ),

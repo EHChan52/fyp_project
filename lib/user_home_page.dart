@@ -5,7 +5,7 @@ import 'widgets/profile_header.dart';
 
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
                     color: const Color(0x7340E1CD),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Maybe you want...',
                     style: TextStyle(
                       fontSize: 36,

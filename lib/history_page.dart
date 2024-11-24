@@ -3,7 +3,7 @@ import 'widgets/transaction_card.dart';
 import 'widgets/profile_header.dart';
 
 class TransactionHistoryScreen extends StatelessWidget {
-  const TransactionHistoryScreen({Key? key}) : super(key: key);
+  const TransactionHistoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

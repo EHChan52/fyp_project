@@ -5,9 +5,9 @@ class SectionHeader extends StatelessWidget {
   final String title;
 
   const SectionHeader({
-    Key? key,
+    super.key,
     required this.title,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class SectionHeader extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 36,
           fontWeight: FontWeight.w700,
         ),

@@ -6,10 +6,10 @@ class RecipeCard extends StatelessWidget {
   final String description;
 
   const RecipeCard({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.description,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class RecipeCard extends StatelessWidget {
             const SizedBox(height: 7),
             Text(
               description,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
               ),

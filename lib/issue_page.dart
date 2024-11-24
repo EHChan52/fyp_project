@@ -4,7 +4,7 @@ import 'widgets/profile_header.dart';
 import 'widgets/issue_form.dart';
 
 class ReportIssueScreen extends StatelessWidget {
-  const ReportIssueScreen({Key? key}) : super(key: key);
+  const ReportIssueScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +17,8 @@ class ReportIssueScreen extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.black),
           ),
-          child: Column(
-            children: const [
+          child: const Column(
+            children: [
               SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

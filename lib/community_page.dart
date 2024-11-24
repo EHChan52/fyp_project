@@ -5,7 +5,7 @@ import 'widgets/deal_card.dart';
 import 'widgets/navigation_bar.dart';
 
 class CommunityScreen extends StatelessWidget {
-  const CommunityScreen({Key? key}) : super(key: key);
+  const CommunityScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

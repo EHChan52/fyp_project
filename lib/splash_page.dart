@@ -4,7 +4,7 @@ import 'sign_in.dart';
 import 'sign_up.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class SplashScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Text(
+                const Text(
                   'EverGreen\nFarm',
                   style: TextStyle(
                     fontSize: 40,
@@ -42,7 +42,7 @@ class SplashScreen extends StatelessWidget {
                     // Handle sign in
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LoginScreen()),
+                      MaterialPageRoute(builder: (context) => const LoginScreen()),
                       );
                   },
                   style: ElevatedButton.styleFrom(
@@ -53,7 +53,7 @@ class SplashScreen extends StatelessWidget {
                     ),
                     minimumSize: const Size(double.infinity, 50),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Sign In',
                     style: TextStyle(
                       fontSize: 24,
@@ -68,7 +68,7 @@ class SplashScreen extends StatelessWidget {
                     // Handle sign up
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      MaterialPageRoute(builder: (context) => const SignUpScreen()),
                       );
                   },
                   style: ElevatedButton.styleFrom(
@@ -79,7 +79,7 @@ class SplashScreen extends StatelessWidget {
                     ),
                     minimumSize: const Size(double.infinity, 50),
                   ),
-                  child: Text(
+                  child: const Text(
                     'Sign Up',
                     style: TextStyle(
                       fontSize: 24,

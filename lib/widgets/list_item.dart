@@ -6,11 +6,11 @@ class ListItem extends StatelessWidget {
   final String iconUrl;
 
   const ListItem({
-    Key? key,
+    super.key,
     required this.title,
     required this.value,
     required this.iconUrl,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

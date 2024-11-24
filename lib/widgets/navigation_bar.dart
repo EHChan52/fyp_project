@@ -6,7 +6,7 @@ import 'package:fyp_project/user_home_page.dart';
 import 'package:fyp_project/profile_page.dart';
 
 class CustomNavigationBar extends StatelessWidget {
-  const CustomNavigationBar({Key? key}) : super(key: key);
+  const CustomNavigationBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class CustomNavigationBar extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => HomeScreen()),
+                MaterialPageRoute(builder: (context) => const HomeScreen()),
                 );
             },
           ),
@@ -39,7 +39,7 @@ class CustomNavigationBar extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => CommunityScreen()),
+                MaterialPageRoute(builder: (context) => const CommunityScreen()),
                 );
             },
           ),
@@ -48,7 +48,7 @@ class CustomNavigationBar extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ChatScreen()),
+                MaterialPageRoute(builder: (context) => const ChatScreen()),
                 );
             },
           ),
@@ -57,7 +57,7 @@ class CustomNavigationBar extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ShopScreen()),
+                MaterialPageRoute(builder: (context) => const ShopScreen()),
                 );
             },
           ),
@@ -66,7 +66,7 @@ class CustomNavigationBar extends StatelessWidget {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => ProfileScreen()),
+                MaterialPageRoute(builder: (context) => const ProfileScreen()),
                 );
             },
           ),

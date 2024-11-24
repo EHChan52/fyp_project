@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchBar1 extends StatelessWidget {
-  const SearchBar1({Key? key}) : super(key: key);
+  const SearchBar1({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class SearchBar1 extends StatelessWidget {
             ),
           ),
             IconButton(
-            icon: Icon(Icons.search),
+            icon: const Icon(Icons.search),
             iconSize: 23,
             onPressed: () {
               // Add your search action here

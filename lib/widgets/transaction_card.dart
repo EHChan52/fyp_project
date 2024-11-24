@@ -7,12 +7,12 @@ class TransactionCard extends StatelessWidget {
   final int amount;
 
   const TransactionCard({
-    Key? key,
+    super.key,
     required this.image,
     required this.title,
     required this.date,
     required this.amount,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

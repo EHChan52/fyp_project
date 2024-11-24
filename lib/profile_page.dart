@@ -12,7 +12,7 @@ import 'widgets/menu_item.dart';
 import 'widgets/navigation_bar.dart';
 
 class ProfileScreen extends StatelessWidget {
-  const ProfileScreen({Key? key}) : super(key: key);
+  const ProfileScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => PIScreen()),
+                      MaterialPageRoute(builder: (context) => const PIScreen()),
                     );
                   },
                 ),
@@ -49,7 +49,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => HealthProfileScreen()),
+                      MaterialPageRoute(builder: (context) => const HealthProfileScreen()),
                     );
                   },
                 ),
@@ -59,7 +59,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => NutritionalRequirementsScreen()),
+                      MaterialPageRoute(builder: (context) => const NutritionalRequirementsScreen()),
                     );
                   },
                 ),
@@ -69,7 +69,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TokensScreen()),
+                      MaterialPageRoute(builder: (context) => const TokensScreen()),
                     );
                   },
                 ),
@@ -79,7 +79,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TransactionHistoryScreen()),
+                      MaterialPageRoute(builder: (context) => const TransactionHistoryScreen()),
                     );
                   },
                 ),
@@ -89,7 +89,7 @@ class ProfileScreen extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ReportIssueScreen()),
+                      MaterialPageRoute(builder: (context) => const ReportIssueScreen()),
                     );
                   },
                 ),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class CustomBackButton extends StatelessWidget {
-  const CustomBackButton({Key? key}) : super(key: key);
+  const CustomBackButton({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,8 +13,8 @@ class CustomBackButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 9),
+          const Padding(
+            padding: EdgeInsets.only(left: 9),
             child: Text(
               'Back',
               style: TextStyle(

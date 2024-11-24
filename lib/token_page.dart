@@ -3,7 +3,7 @@ import 'widgets/deal_card.dart';
 import 'widgets/navigation_bar.dart';
 
 class TokensScreen extends StatelessWidget {
-  const TokensScreen({Key? key}) : super(key: key);
+  const TokensScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class TokensScreen extends StatelessWidget {
                     ),
                     child: Row(
                       children: [
-                        Text(
+                        const Text(
                           'Back',
                           style: TextStyle(
                             fontSize: 40,
@@ -53,7 +53,7 @@ class TokensScreen extends StatelessWidget {
                   color: const Color(0x7340E1CD),
                   borderRadius: BorderRadius.circular(5),
                 ),
-                child: Text(
+                child: const Text(
                   'Tokens',
                   style: TextStyle(
                     fontSize: 36,
@@ -62,9 +62,9 @@ class TokensScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 12),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   DealCard(
                     title: 'Best Deal !!!',
                     location: '18888 Coins',
@@ -82,9 +82,9 @@ class TokensScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 24),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   DealCard(
                     location: '2000 Coins',
                     discountedPrice: '200',
@@ -98,9 +98,9 @@ class TokensScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 22),
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   DealCard(
                     location: '800 Coins',
                     discountedPrice: '75',

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ChatMessages extends StatelessWidget {
-  const ChatMessages({Key? key}) : super(key: key);
+  const ChatMessages({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView(
-        children: [
+        children: const [
           _BotMessage(
             message: "Hi~ Hi~ I am your AI chatbot~ You can ask me anything related to health! Aha! I am your super \"healthman\"!!",
             imagePath: "assets/bot_avatar.png",
@@ -35,10 +35,10 @@ class _BotMessage extends StatelessWidget {
   final String imagePath;
 
   const _BotMessage({
-    Key? key,
+    super.key,
     required this.message,
     required this.imagePath,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -70,7 +70,7 @@ class _BotMessage extends StatelessWidget {
               ),
               child: Text(
                 message,
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
               ),
             ),
           ),
@@ -85,10 +85,10 @@ class _UserMessage extends StatelessWidget {
   final String imagePath;
 
   const _UserMessage({
-    Key? key,
+    super.key,
     required this.message,
     required this.imagePath,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +114,7 @@ class _UserMessage extends StatelessWidget {
               ),
               child: Text(
                 message,
-                style: TextStyle(fontSize: 15),
+                style: const TextStyle(fontSize: 15),
               ),
             ),
           ),

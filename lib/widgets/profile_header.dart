@@ -6,10 +6,10 @@ class ProfileHeader extends StatelessWidget {
   final String name;
 
   const ProfileHeader({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.name,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class ProfileHeader extends StatelessWidget {
             const SizedBox(height: 6),
             Text(
               name,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 34,
                 fontWeight: FontWeight.w400,
               ),

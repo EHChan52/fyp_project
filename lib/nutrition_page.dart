@@ -3,7 +3,7 @@ import 'widgets/profile_header.dart';
 import 'widgets/recipe_card.dart';
 
 class NutritionalRequirementsScreen extends StatelessWidget {
-  const NutritionalRequirementsScreen({Key? key}) : super(key: key);
+  const NutritionalRequirementsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
