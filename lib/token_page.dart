@@ -27,22 +27,6 @@ class TokensScreen extends StatelessWidget {
                         color: Colors.black.withOpacity(0.2),
                       ),
                     ),
-                    child: Row(
-                      children: [
-                        const Text(
-                          'Back',
-                          style: TextStyle(
-                            fontSize: 40,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                        Image.network(
-                          'https://cdn.builder.io/api/v1/image/assets/TEMP/41d21b220054fec39098ba01055e48db5f1ab6f77fbceeb65e1fbc1dcd1d9f52?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-                          width: 48,
-                          height: 48,
-                        ),
-                      ],
-                    ),
                   ),
                 ],
               ),
