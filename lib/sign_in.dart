@@ -17,6 +17,27 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+    void _signIn() {
+    if (_formKey.currentState!.validate()) {
+      // Verify the username and password
+      if (_emailController.text == 'Mike' && _passwordController.text == '12345678') {
+        // Navigate to the home page
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => const HomeScreen()),
+        );
+      } else {
+        // Show an error message
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Invalid username or password'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -119,15 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const SizedBox(height: 47),
                     ElevatedButton(
-                      onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          // Handle sign in logic
-                          Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => const HomeScreen()),
-                          );
-                        }
-                      },
+                      onPressed: _signIn,
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF21BBCC),
                         shape: RoundedRectangleBorder(
