@@ -24,6 +24,7 @@ class ChatMessages extends StatelessWidget {
                 "I hope these suggestions are helpful for you! How do you think these options sound?",
             imagePath: "assets/veggie.png",
           ),
+          SizedBox(height: 200), 
         ],
       ),
     );
