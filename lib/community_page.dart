@@ -51,7 +51,9 @@ class CommunityScreen extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 22),
-                  SectionHeader(title: 'Recommended'),
+                  SectionHeader(title: 'Recommended'
+                  
+                  ),
                   SizedBox(height: 14),
                   Row(
                     children: [

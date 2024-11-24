@@ -33,6 +33,7 @@ class ChatScreen extends StatelessWidget {
                     fontWeight: FontWeight.w700,
                   ),
                   semanticsLabel: 'Chat with Veggie Title',
+                  textAlign: TextAlign.center,
                 ),
               ),
               const ChatMessages(),

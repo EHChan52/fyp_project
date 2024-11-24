@@ -22,7 +22,7 @@ class SectionHeader extends StatelessWidget {
         title,
         textAlign: TextAlign.center,
         style: const TextStyle(
-          fontSize: 36,
+          fontSize: 34,
           fontWeight: FontWeight.w700,
         ),
       ),
