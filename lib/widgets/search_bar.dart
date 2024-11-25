@@ -9,7 +9,7 @@ class SearchBar1 extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
+        borderRadius: BorderRadius.circular(50),
         border: Border.all(color: Colors.black.withOpacity(0.3)),
       ),
       padding: const EdgeInsets.symmetric(horizontal: 21, vertical: 11),
@@ -27,18 +27,26 @@ class SearchBar1 extends StatelessWidget {
               ),
             ),
           ),
-            IconButton(
-            icon: const Icon(Icons.search),
-            iconSize: 23,
-            onPressed: () {
-              // Add your search action here
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const DinnerEventScreen()),
-                );
-            },
-            tooltip: 'Search',
+          Container(
+
+            padding: const EdgeInsets.only(right: 5), 
+            child: SizedBox(
+              width: 50, 
+              height: 60, 
+              child: IconButton(
+                icon: const Icon(Icons.search),
+                iconSize: 20,
+                padding: const EdgeInsets.only(bottom:2),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const DinnerEventScreen()),
+                  );
+                },
+                tooltip: 'Search',
+              ),
             ),
+          ),
         ],
       ),
     );

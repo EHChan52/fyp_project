@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/search_bar.dart';
-
 import 'data/chat_message.dart';
-
 import 'widgets/navigation_bar.dart';
 
 class ChatScreen extends StatelessWidget {
@@ -13,7 +11,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF0F0F0),
-       body: SafeArea(
+      body: SafeArea(
         child: Stack(
           children: [
             Column(
@@ -34,8 +32,13 @@ class ChatScreen extends StatelessWidget {
                     semanticsLabel: 'Chat with Veggie Title',
                   ),
                 ),
-                const Expanded(
-                  child: ChatMessages(),
+                Expanded(
+                  child: Center(
+                    child: Container(
+                      width: 390,
+                      child: const ChatMessages(),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -45,7 +48,15 @@ class ChatScreen extends StatelessWidget {
               right: 0,
               child: Column(
                 children: [
-                  SearchBar1(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10), 
+                    child: SizedBox(
+                      width: 380, 
+                      height: 50, 
+                      child: SearchBar1(),
+                    ),
+                  ),
+                  SizedBox(height: 8), 
                   CustomNavigationBar(),
                 ],
               ),

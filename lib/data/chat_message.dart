@@ -7,6 +7,7 @@ class ChatMessages extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 10), // Add padding to the ListView
         children: const [
           _BotMessage(
             message: "Hi~ Hi~ I am your AI chatbot~ You can ask me anything related to health! Aha! I am your super \"healthman\"!!",
@@ -54,7 +55,8 @@ class _BotMessage extends StatelessWidget {
             semanticLabel: 'Bot avatar',
           ),
           const SizedBox(width: 14),
-          Expanded(
+          SizedBox(
+            width: 300, // Set the desired width here
             child: Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
@@ -97,11 +99,12 @@ class _UserMessage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Expanded(
+          SizedBox(
+            width: 300, // Set the desired width here
             child: Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: const Color(0x7340E1CD),
+                color: const Color(0xFF40E1CE),
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(

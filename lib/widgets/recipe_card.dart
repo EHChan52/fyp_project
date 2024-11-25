@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-
 class RecipeCard extends StatelessWidget {
   final String imageUrl;
   final String description;
+  final double width;
 
   const RecipeCard({
     super.key,
     required this.imageUrl,
     required this.description,
+    this.width = double.infinity, // Default width is set to double.infinity
   });
 
   @override
@@ -16,6 +17,7 @@ class RecipeCard extends StatelessWidget {
     return Semantics(
       label: 'Recipe suggestion card: $description',
       child: Container(
+        width: width, // Set the width of the card
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
