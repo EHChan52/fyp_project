@@ -1,3 +1,5 @@
+import 'package:flutter/services.dart' show rootBundle;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
@@ -17,10 +19,35 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-    void _signIn() {
+  Future<Map<String, String>> _loadUserData() async {
+  try {
+    final contents = await rootBundle.loadString('lib/data/user_account_data.txt');
+    final lines = contents.split('\n');
+    final userData = <String, String>{};
+
+    for (var line in lines) {
+      final parts = line.split(':');
+      if (parts.length == 2) {
+        userData[parts[0].trim()] = parts[1].trim();
+      }
+    }
+
+    return userData;
+  } catch (e) {
+    print('Error loading user data: $e');
+    return {};
+  }
+}
+
+  void _signIn() async {
     if (_formKey.currentState!.validate()) {
-      // Verify the username and password
-      if (_emailController.text == 'Mike' && _passwordController.text == '12345678') {
+      final userData = await _loadUserData();
+      final username = userData['username'];
+      final email = userData['email'];
+      final password = userData['password'];
+
+      if ((_emailController.text == username || _emailController.text == email) &&
+          _passwordController.text == password) {
         // Navigate to the home page
         Navigator.push(
           context,

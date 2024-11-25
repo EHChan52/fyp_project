@@ -11,34 +11,43 @@ class DinnerEventScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF0F0F0),
-      body: SingleChildScrollView(
-        child: Container(
-          constraints: const BoxConstraints(maxWidth: 480),
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  ProfileHeader(name: 'Mike', imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            child: Container(
+              constraints: const BoxConstraints(maxWidth: 480),
+              margin: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: [
+                  const SizedBox(height: 20),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      ProfileHeader(name: 'Mike', imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
+                    ],
+                  ),
+                  const SizedBox(height: 19),
+                  _buildSectionTitle('Dinner at Tuen Mun'),
+                  const SizedBox(height: 19),
+                  const EventCard(),
+                  const SizedBox(height: 19),
+                  _buildSectionTitle('Information'),
+                  const SizedBox(height: 26),
+                  const InfoCard(),
+                  const SizedBox(height: 26),
+                  _buildJoinSection(),
+                  const SizedBox(height: 100), // Add some space at the bottom
                 ],
               ),
-              const SizedBox(height: 19),
-              _buildSectionTitle('Dinner at Tuen Mun'),
-              const SizedBox(height: 19),
-              const EventCard(),
-              const SizedBox(height: 19),
-              _buildSectionTitle('Information'),
-              const SizedBox(height: 26),
-              const InfoCard(),
-              const SizedBox(height: 26),
-              _buildJoinSection(),
-              const SizedBox(height: 7),
-              const CustomNavigationBar(),
-            ],
+            ),
           ),
-        ),
+          const Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: CustomNavigationBar(),
+          ),
+        ],
       ),
     );
   }

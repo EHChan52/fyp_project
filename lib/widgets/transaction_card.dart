@@ -29,7 +29,7 @@ class TransactionCard extends StatelessWidget {
           ),
         ],
       ),
-      padding: const EdgeInsets.fromLTRB(7, 14, 42, 14),
+      padding: const EdgeInsets.fromLTRB(7, 14, 25, 14),
       child: Row(
         children: [
           ClipRRect(
@@ -86,7 +86,7 @@ class TransactionCard extends StatelessWidget {
                 '${amount > 0 ? '+' : ''}$amount',
                 style: const TextStyle(
                   fontFamily: 'Roboto',
-                  fontSize: 24,
+                  fontSize: 20,
                 ),
               ),
             ],
