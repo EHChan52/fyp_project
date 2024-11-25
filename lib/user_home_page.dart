@@ -56,7 +56,12 @@ class HomeScreen extends StatelessWidget {
                       imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d88bf9c6abc58123e9e345ddfab2144f4d748877bebd247226c82d63151495b?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                       description: 'Shopping Time',
                     ),
-                    const SizedBox(height: 10), // Add some space at the bottom
+                    const SizedBox(height: 20), // Add some space at the bottom
+                    const RecipeCard(
+                      imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/4d88bf9c6abc58123e9e345ddfab2144f4d748877bebd247226c82d63151495b?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                      description: 'Shopping Time',
+                    ),
+                    const SizedBox(height: 20), // Add some space at the bottom
                   ],
                 ),
               ),

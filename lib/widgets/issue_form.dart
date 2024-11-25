@@ -55,8 +55,9 @@ class IssueForm extends StatelessWidget {
           ),
           const SizedBox(height: 37),
           _buildUploadSection(),
-          const SizedBox(height: 29),
+          const SizedBox(height: 10),
           _buildSubmitButton(),
+          const SizedBox(height: 30),
         ],
       ),
     );
@@ -97,12 +98,11 @@ class IssueForm extends StatelessWidget {
               ),
             ],
           ),
-          child: Image.network(
-            'https://cdn.builder.io/api/v1/image/assets/TEMP/f4279f4b43d4b5ed65b1c69ef7b34fc668c883f9473235d74296b764fcc4b809?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-            width: 48,
-            height: 48,
+            child: const Icon(
+            Icons.upload_file,
+            size: 48,
             semanticLabel: 'Upload image icon',
-          ),
+            ),
         ),
       ],
     );
@@ -111,7 +111,7 @@ class IssueForm extends StatelessWidget {
   Widget _buildSubmitButton() {
     return Container(
       width: 180,
-      padding: const EdgeInsets.only(left: 16),
+      padding: const EdgeInsets.only(left: 16,right: 16,),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: const Color(0x7240E1CD),
@@ -126,12 +126,11 @@ class IssueForm extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 19),
-          Image.network(
-            'https://cdn.builder.io/api/v1/image/assets/TEMP/bd89b28c63dd91d8d6a0639ccfa9eaf2e15b78159caf7242facd68c125ad1aa1?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-            width: 40,
-            height: 40,
+            const Icon(
+            Icons.send,
+            size: 40,
             semanticLabel: 'Submit button icon',
-          ),
+            ),
         ],
       ),
     );

@@ -25,6 +25,7 @@ class ShopScreen extends StatelessWidget {
                   SearchBar1(),
                   SizedBox(height: 18),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: DealCard(
@@ -47,6 +48,7 @@ class ShopScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 24),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: DealCard(
@@ -67,6 +69,7 @@ class ShopScreen extends StatelessWidget {
                   ),
                   SizedBox(height: 22),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
                         child: DealCard(

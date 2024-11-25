@@ -39,53 +39,59 @@ class SplashScreen extends StatelessWidget {
                 const SizedBox(height: 55),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle sign in
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const LoginScreen()),
-                      );
+                  // Handle sign in
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginScreen()),
+                  );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF21BBCC),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 70,
-                      vertical: 14,
-                    ),
-                    minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: const Color(0xFF21BBCC),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 70,
+                    vertical: 14,
+                  ),
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero,
+                  ),
                   ),
                   child: const Text(
-                    'Sign In',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                  'Sign In',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
                   ),
                 ),
                 const SizedBox(height: 55),
                 ElevatedButton(
                   onPressed: () {
-                    // Handle sign up
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignUpScreen()),
-                      );
+                  // Handle sign up
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const SignUpScreen()),
+                  );
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF21BBCC),
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 70,
-                      vertical: 14,
-                    ),
-                    minimumSize: const Size(double.infinity, 50),
+                  backgroundColor: const Color(0xFF21BBCC),
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 70,
+                    vertical: 14,
+                  ),
+                  minimumSize: const Size(double.infinity, 50),
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero,
+                  ),
                   ),
                   child: const Text(
-                    'Sign Up',
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w700,
-                      color: Colors.white,
-                    ),
+                  'Sign Up',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
+                  ),
                   ),
                 ),
               ],
