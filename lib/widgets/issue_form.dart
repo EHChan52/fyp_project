@@ -57,7 +57,7 @@ class IssueForm extends StatelessWidget {
           const SizedBox(height: 37),
           _buildUploadSection(),
           const SizedBox(height: 10),
-          _buildSubmitButton(),
+          _buildSubmitButton(context),
           const SizedBox(height: 30),
         ],
       ),
@@ -114,30 +114,43 @@ class IssueForm extends StatelessWidget {
     );
   }
 
-  Widget _buildSubmitButton() {
-    return Container(
-      width: 180,
-      padding: const EdgeInsets.only(left: 16,right: 16,),
-      decoration: BoxDecoration(
+  Widget _buildSubmitButton(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {
+      // Add your submit logic here
+      Navigator.of(context).pop();
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Your opinion has been submitted!'),
+        ),
+      );
+      },
+      style: ElevatedButton.styleFrom(
+      backgroundColor: const Color(0x7240E1CD),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        color: const Color(0x7240E1CD),
+      ),
+      minimumSize: const Size(200, 50), // Decrease the width of the button
       ),
       child: const Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            'Submit',
-            style: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-          Icon(
-            Icons.send,
-            size: 30,
-            semanticLabel: 'Submit button icon',
-            ),
-        ],
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+        'Submit',
+        style: TextStyle(
+          fontSize: 36,
+          fontWeight: FontWeight.w700,
+          color: Colors.black,
+        ),
+        ),
+        Icon(
+        Icons.send,
+        size: 30,
+        semanticLabel: 'Submit button icon',
+        color: Colors.black,
+        ),
+      ],
       ),
     );
   }

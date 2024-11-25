@@ -33,7 +33,7 @@ class DinnerEventScreen extends StatelessWidget {
                   const SizedBox(height: 26),
                   const InfoCard(),
                   const SizedBox(height: 26),
-                  _buildJoinSection(),
+                  _buildJoinSection(context),
                   const SizedBox(height: 100), // Add some space at the bottom
                 ],
               ),
@@ -70,32 +70,42 @@ class DinnerEventScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildJoinSection() {
+  Widget _buildJoinSection(BuildContext context) {
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(maxWidth: 390),
       padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 16),
       decoration: BoxDecoration(
-        color: const Color(0x7340E1CD),
-        borderRadius: BorderRadius.circular(5),
+      color: const Color(0x7340E1CD),
+      borderRadius: BorderRadius.circular(5),
       ),
+      child: TextButton(
+      onPressed: () {
+        // Add your onPressed code here!
+        final snackBar = const SnackBar(
+          content: Text('You have joined the dinner successfully!'),
+        );
+        ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Join for 1000',
-            style: const TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w700,
-            ),
+        const Text(
+          'Join for 1000',
+          style: TextStyle(
+          fontSize: 36,
+          fontWeight: FontWeight.w700,
+          color: Colors.black
           ),
-          const SizedBox(width: 8),
-          Image.asset(
-            'assets/Token.png',
-            width: 28,
-            height: 28,
-          ),
+        ),
+        const SizedBox(width: 8),
+        Image.asset(
+          'assets/Token.png',
+          width: 28,
+          height: 28,
+        ),
         ],
+      ),
       ),
     );
   }

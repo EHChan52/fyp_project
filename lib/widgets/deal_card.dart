@@ -63,7 +63,7 @@ class DealCard extends StatelessWidget {
         Text(
           itemName,
           style: const TextStyle(
-          fontSize: 15,
+          fontSize: 24,
           fontWeight: FontWeight.w700,
           ),
         ),
@@ -80,7 +80,7 @@ class DealCard extends StatelessWidget {
             if (originalPrice.isNotEmpty)
             Text(
               originalPrice,
-              style: TextStyle(
+              style: TextStyle( 
               fontSize: 12,
               decoration: discountedPrice.isNotEmpty
                 ? TextDecoration.lineThrough
