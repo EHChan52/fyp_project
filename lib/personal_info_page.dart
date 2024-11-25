@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
 import 'widgets/profile_info_item.dart';
 
+
 class PIScreen extends StatelessWidget {
   const PIScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: const Color(0xFFF0F0F0),
-        child: SingleChildScrollView(
+      body: Column(
+        children: [
+          SingleChildScrollView(
           child: Container(
             constraints: const BoxConstraints(maxWidth: 480),
             margin: const EdgeInsets.symmetric(horizontal: 16),
@@ -66,6 +67,7 @@ class PIScreen extends StatelessWidget {
             ),
           ),
         ),
+        ],       
       ),
     );
   }
@@ -78,12 +80,7 @@ class PIScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              Image.network(
-                'https://cdn.builder.io/api/v1/image/assets/TEMP/c1097428056e519ac29c50d0a27531114f14d581d65626880cdd8178101e9c5a?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-                width: 40,
-                height: 40,
-                semanticLabel: 'Profile icon',
-              ),
+              
             ],
           ),
           Image.network(

@@ -20,12 +20,10 @@ class DinnerEventScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
-                      ProfileHeader(name: 'Mike', imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
-                    ],
-                  ),
+                  const Align(
+                    alignment: Alignment.topRight,
+                    child: ProfileHeader(name: 'Mike', imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
+                    ),
                   const SizedBox(height: 19),
                   _buildSectionTitle('Dinner at Tuen Mun'),
                   const SizedBox(height: 19),
@@ -64,7 +62,7 @@ class DinnerEventScreen extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 36,
           fontWeight: FontWeight.w700,
         ),
@@ -76,7 +74,7 @@ class DinnerEventScreen extends StatelessWidget {
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(maxWidth: 390),
-      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 74),
+      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 16),
       decoration: BoxDecoration(
         color: const Color(0x7340E1CD),
         borderRadius: BorderRadius.circular(5),
@@ -84,16 +82,16 @@ class DinnerEventScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
+          const Text(
             'Join for 1000',
-            style:TextStyle(
+            style: const TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.w700,
             ),
           ),
           const SizedBox(width: 8),
-          Image.network(
-            'https://cdn.builder.io/api/v1/image/assets/TEMP/e8af101cabb71c419822ea0015b6ef0c7b2cba9421b23c59cadf7f131460ae34?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+          Image.asset(
+            'assets/Token.png',
             width: 28,
             height: 28,
           ),

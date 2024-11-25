@@ -29,10 +29,12 @@ class TransactionHistoryScreen extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 53),
                   child: const Text(
                     'Transaction History',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontFamily: 'Cormorant Garamond',
                       fontSize: 36,
                       fontWeight: FontWeight.w700,
+
                     ),
                   ),
                 ),

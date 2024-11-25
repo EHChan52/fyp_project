@@ -18,13 +18,38 @@ class HealthProfileScreen extends StatelessWidget {
           decoration: BoxDecoration(
             border: Border.all(color: Colors.black),
           ),
-          child: const SingleChildScrollView(
+          child: SingleChildScrollView(
             child: Column(
               children: [
-                ProfileHeader(
-                  imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb484',
-                  name: 'username:123456',
-                ),
+                Container(
+                    color: const Color(0x7340E1CD),
+                    padding: const EdgeInsets.fromLTRB(29, 33, 80, 33),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            
+                          ],
+                        ),
+                        Image.network(
+                          'https://cdn.builder.io/api/v1/image/assets/TEMP/a047ce292ac2769033e355036671227e2cbd21f246a71c32570d4d4c57ab1013?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                          width: 85,
+                          height: 85,
+                          semanticLabel: 'User avatar',
+                        ),
+                        const SizedBox(height: 11),
+                        const Text(
+                          'username:123456',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'Roboto',
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
                 SizedBox(height: 56),
                 SectionHeader(
                   title: "Health Condition",

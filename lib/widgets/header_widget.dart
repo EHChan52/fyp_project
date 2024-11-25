@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'shopping_cart.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
@@ -27,14 +28,31 @@ class HeaderWidget extends StatelessWidget {
           ),
             IconButton(
             icon: Image.asset(
-              'assets/ShoppingCart copy.png',
+              'assets/ShoppingCart.png',
               width: 32,
               height: 32,
               semanticLabel: 'Green Market Logo',
             ),
             onPressed: () {
               // Add your onPressed code here!
-
+              showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return AlertDialog(
+                    content: Container(
+                      width: double.maxFinite,
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          // Add your shopping cart widget here
+                          ShoppingCartScreen(),
+                          // Example: ShoppingCartWidget(),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
             },
             ),
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class IssueForm extends StatelessWidget {
   const IssueForm({super.key});
 
@@ -98,10 +99,15 @@ class IssueForm extends StatelessWidget {
               ),
             ],
           ),
-            child: const Icon(
-            Icons.upload_file,
-            size: 48,
-            semanticLabel: 'Upload image icon',
+            child: IconButton(
+              icon: const Icon(
+              Icons.upload_file,
+              size: 48,
+              semanticLabel: 'Upload image icon',
+              ),
+              onPressed: (){
+              
+              },
             ),
         ),
       ],
@@ -116,19 +122,19 @@ class IssueForm extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
         color: const Color(0x7240E1CD),
       ),
-      child: Row(
+      child: const Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Text(
+          Text(
             'Submit',
             style: TextStyle(
               fontSize: 36,
               fontWeight: FontWeight.w700,
             ),
           ),
-          const SizedBox(width: 19),
-            const Icon(
+          Icon(
             Icons.send,
-            size: 40,
+            size: 30,
             semanticLabel: 'Submit button icon',
             ),
         ],

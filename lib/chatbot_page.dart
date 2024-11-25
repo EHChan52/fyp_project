@@ -25,6 +25,7 @@ class ChatScreen extends StatelessWidget {
                   ),
                   child: const Text(
                     'Chat with Veggie',
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.w700,

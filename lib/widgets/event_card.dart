@@ -38,25 +38,23 @@ class EventCard extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      Image.network(
-                        'https://cdn.builder.io/api/v1/image/assets/TEMP/6918abf8a6bb177e12f54b63948624052393a5f86c1d8be2d9a88eec12343588?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-                        width: 24,
-                        height: 24,
-                      ),
+                        Icon(
+                        Icons.calendar_today,
+                        size: 24,
+                        ),
                       const SizedBox(width: 4),
                       Text(
                         '20/10 8:30PM',
-                        style: TextStyle(fontSize: 24),
+                        style: TextStyle(fontSize:20),
                       ),
                     ],
                   ),
                   Row(
                     children: [
-                      Image.network(
-                        'https://cdn.builder.io/api/v1/image/assets/TEMP/cd4974cf33c29380778b74515a3c26be62d6c1891f996e3c57ae4bab11b64be2?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-                        width: 23,
-                        height: 23 * 1.35,
-                      ),
+                        Icon(
+                        Icons.person,
+                        size: 24,
+                        ),
                       const SizedBox(width: 7),
                       Text(
                         '2/4',
