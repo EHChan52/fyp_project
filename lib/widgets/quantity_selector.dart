@@ -33,7 +33,7 @@ class _QuantitySelectorState extends State<QuantitySelector> {
           child: IconButton(
             icon: const Icon(
               Icons.remove,
-              size: 24,
+              size: 14,
             ),
             onPressed: _decrementQuantity,
             tooltip: 'Decrease quantity',
@@ -48,7 +48,7 @@ class _QuantitySelectorState extends State<QuantitySelector> {
           child: Text(
             quantity.toString(),
             style: const TextStyle(
-              fontSize: 24,
+              fontSize: 14,
               fontFamily: 'Roboto',
             ),
             semanticsLabel: 'Quantity: $quantity',
@@ -58,7 +58,7 @@ class _QuantitySelectorState extends State<QuantitySelector> {
           child: IconButton(
             icon: const Icon(
               Icons.add,
-              size: 24,
+              size: 14,
             ),
             onPressed: _incrementQuantity,
             tooltip: 'Increase quantity',

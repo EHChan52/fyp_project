@@ -58,26 +58,7 @@ class CartItem extends StatelessWidget {
               ),
               ),
               const SizedBox(width: 5),
-              Flexible(
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                Image.asset(
-                  'assets/Token.png',
-                  width: 28,
-                  height: 28,
-                  semanticLabel: 'Currency symbol',
-                ),
-                Text(
-                  price.toString(),
-                  style: const TextStyle(
-                  fontSize: 24,
-                  fontFamily: 'Roboto',
-                  ),
-                ),
-                ],
-              ),
-              ),
+              
             ],
             ),
             const SizedBox(height: 20),
