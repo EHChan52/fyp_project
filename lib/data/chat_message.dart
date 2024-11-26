@@ -48,11 +48,14 @@ class _BotMessage extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset(
-            imagePath,
-            width: 45,
-            height: 45,
-            semanticLabel: 'Bot avatar',
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10), 
+            child: Image.asset(
+              imagePath,
+              width: 45,
+              height: 45,
+              semanticLabel: 'Bot avatar',
+            ),
           ),
           const SizedBox(width: 14),
           SizedBox(
@@ -121,11 +124,15 @@ class _UserMessage extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 14),
-          Image.asset(
-            imagePath,
-            width: 45,
-            height: 45,
-            semanticLabel: 'User avatar',
+          ClipRRect(
+            borderRadius: BorderRadius.circular(10), 
+            child: Image.asset(
+              imagePath,
+              width: 45,
+              height: 45,
+              fit: BoxFit.cover,
+              semanticLabel: 'User avatar',
+            ),
           ),
         ],
       ),

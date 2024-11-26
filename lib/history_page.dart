@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/transaction_card.dart';
 import 'widgets/profile_header.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class TransactionHistoryScreen extends StatelessWidget {
   const TransactionHistoryScreen({super.key});
@@ -27,14 +28,12 @@ class TransactionHistoryScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(5),
                   ),
                   padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 53),
-                  child: const Text(
+                  child: Text(
                     'Transaction History',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontFamily: 'Cormorant Garamond',
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
-
+                    style: GoogleFonts.cormorantGaramond(
+                      fontSize: 34,
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),

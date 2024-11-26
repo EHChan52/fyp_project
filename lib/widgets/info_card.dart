@@ -37,13 +37,7 @@ class InfoCard extends StatelessWidget {
               'Avocado is packed with healthy fats, fiber, vitamins and potassium.\nAvocado is used in both sweet and savory dishes',
               style: TextStyle(
                 fontSize: 15,
-                shadows: const [
-                  Shadow(
-                    color: Color(0x40000000),
-                    offset: Offset(0, 4),
-                    blurRadius: 4,
-                  ),
-                ],
+                color: Color.fromARGB(255, 0, 0, 0),
               ),
             ),
           ),

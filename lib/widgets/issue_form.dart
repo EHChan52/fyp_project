@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 class IssueForm extends StatelessWidget {
   const IssueForm({super.key});
@@ -17,12 +17,12 @@ class IssueForm extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               color: const Color(0x7240E1CD),
             ),
-            child: const Text(
+            child: Text(
               'Report an issue',
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: GoogleFonts.cormorantGaramond(
                 fontSize: 36,
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.bold,
               ),
             ),
           ),
@@ -47,7 +47,7 @@ class IssueForm extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Describe the issue here',
                 border: InputBorder.none,
-                hintStyle: TextStyle(
+                hintStyle: GoogleFonts.roboto (
                   fontSize: 24,
                   color: Colors.black.withOpacity(0.6),
                 ),
@@ -75,12 +75,12 @@ class IssueForm extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: const Color(0x7240E1CD),
           ),
-          child: const Text(
+          child: Text(
             'Upload Image',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.cormorantGaramond(
               fontSize: 36,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
@@ -99,16 +99,16 @@ class IssueForm extends StatelessWidget {
               ),
             ],
           ),
-            child: IconButton(
-              icon: const Icon(
+          child: IconButton(
+            icon: const Icon(
               Icons.upload_file,
               size: 48,
               semanticLabel: 'Upload image icon',
-              ),
-              onPressed: (){
-              
-              },
             ),
+            onPressed: () {
+              // Add your upload logic here
+            },
+          ),
         ),
       ],
     );
@@ -117,40 +117,41 @@ class IssueForm extends StatelessWidget {
   Widget _buildSubmitButton(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-      // Add your submit logic here
-      Navigator.of(context).pop();
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('Your opinion has been submitted!'),
-        ),
-      );
+        // Add your submit logic here
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('Your opinion has been submitted!'),
+          ),
+        );
       },
       style: ElevatedButton.styleFrom(
-      backgroundColor: const Color(0x7240E1CD),
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(10),
+        backgroundColor: const Color(0xFF2BEBD5),
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        minimumSize: const Size(200, 50), // Decrease the width of the button
       ),
-      minimumSize: const Size(200, 50), // Decrease the width of the button
-      ),
-      child: const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-        'Submit',
-        style: TextStyle(
-          fontSize: 36,
-          fontWeight: FontWeight.w700,
-          color: Colors.black,
-        ),
-        ),
-        Icon(
-        Icons.send,
-        size: 30,
-        semanticLabel: 'Submit button icon',
-        color: Colors.black,
-        ),
-      ],
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            'Submit',
+            style: GoogleFonts.cormorantGaramond(
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+          ),
+          const SizedBox(width: 8),
+          const Icon(
+            Icons.send,
+            size: 30,
+            semanticLabel: 'Submit button icon',
+            color: Colors.black,
+          ),
+        ],
       ),
     );
   }

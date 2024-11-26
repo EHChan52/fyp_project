@@ -14,9 +14,7 @@ class ReportIssueScreen extends StatelessWidget {
         child: Container(
           constraints: const BoxConstraints(maxWidth: 480),
           margin: const EdgeInsets.symmetric(horizontal: 16),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.black),
-          ),
+
           child: const Column(
             children: [
               SizedBox(height: 20),

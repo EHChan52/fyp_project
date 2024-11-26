@@ -1,6 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'sign_in.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -48,11 +48,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
+                Text(
                   'Hello!',
-                  style: TextStyle(
-                    fontSize: 34,
-                    color: Colors.black,
+                  style: GoogleFonts.borel(
+                    textStyle: const TextStyle(
+                      fontSize: 34,
+                      color: Colors.black,
+                    ),
                   ),
                   semanticsLabel: 'Welcome greeting',
                 ),

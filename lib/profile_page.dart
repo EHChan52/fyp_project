@@ -21,13 +21,45 @@ class ProfileScreen extends StatelessWidget {
         children: [
           SingleChildScrollView(
             child: Container(
-
-
               child: Column(
                 children: [
-                  const ProfileHeader(
-                    imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-                    name: 'Mike',
+                  Container(
+                    height: 200, 
+                    width: double.infinity, 
+                    color: const Color(0x7340E1CD),
+                    child: Row(
+                      children: [
+                        const SizedBox(width: 22),
+                        Column(
+                          mainAxisAlignment: MainAxisAlignment.start, 
+                          children: [
+                            const SizedBox(height: 85), 
+                            Image.network(
+                              'https://cdn.builder.io/api/v1/image/assets/TEMP/a047ce292ac2769033e355036671227e2cbd21f246a71c32570d4d4c57ab1013?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                              width: 80, 
+                              height: 80, 
+                              fit: BoxFit.cover, 
+                            ),
+                          ],
+                        ),
+                        const SizedBox(width: 16), 
+                        const Expanded(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center, 
+                            crossAxisAlignment: CrossAxisAlignment.start, 
+                            children: [
+                              Text(
+                                'Mike',
+                                style: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                   const SizedBox(height: 60),
                   MenuItem(

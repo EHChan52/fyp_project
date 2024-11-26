@@ -16,13 +16,20 @@ class ShopScreen extends StatelessWidget {
           SingleChildScrollView(
             child: Container(
               constraints: const BoxConstraints(maxWidth: 480),
-              margin: const EdgeInsets.symmetric(horizontal: 16),
+              margin: const EdgeInsets.symmetric(horizontal: 14),
               child: const Column(
                 children: [
                   SizedBox(height: 61),
                   HeaderWidget(),
                   SizedBox(height: 14),
-                  SearchBar1(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10), 
+                    child: SizedBox(
+                      width: 380, 
+                      height: 50, 
+                      child: SearchBar1(),
+                    ),
+                  ),
                   SizedBox(height: 18),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

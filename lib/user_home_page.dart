@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'widgets/recipe_card.dart';
 import 'widgets/navigation_bar.dart';
 import 'widgets/profile_header.dart';
@@ -16,7 +17,6 @@ class HomeScreen extends StatelessWidget {
             child: SingleChildScrollView(
               child: Container(
                 constraints: const BoxConstraints(maxWidth: 480),
-
                 child: Column(
                   children: [
                     const ProfileHeader(
@@ -30,11 +30,13 @@ class HomeScreen extends StatelessWidget {
                         color: const Color(0x7340E1CD),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Text(
+                      child: Text(
                         'Maybe you want...',
-                        style: TextStyle(
-                          fontSize: 36,
-                          fontWeight: FontWeight.bold,
+                        style: GoogleFonts.cormorantGaramond(
+                          textStyle: const TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
                         textAlign: TextAlign.center,
                       ),

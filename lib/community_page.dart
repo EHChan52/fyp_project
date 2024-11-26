@@ -3,6 +3,7 @@ import 'widgets/search_bar.dart';
 import 'widgets/section_header.dart';
 import 'widgets/deal_card.dart';
 import 'widgets/navigation_bar.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CommunityScreen extends StatelessWidget {
   const CommunityScreen({super.key});
@@ -25,7 +26,14 @@ class CommunityScreen extends StatelessWidget {
                       SizedBox(height: 62),
                       SectionHeader(title: 'Community'),
                       SizedBox(height: 13),
-                      SearchBar1(),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 10),
+                        child: SizedBox(
+                          width: 380,
+                          height: 50,
+                          child: SearchBar1(),
+                        ),
+                      ),
                       SizedBox(height: 15),
                       SectionHeader(title: 'Daily Deal'),
                       SizedBox(height: 14),

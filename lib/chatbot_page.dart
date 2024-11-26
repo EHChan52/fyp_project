@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/search_bar.dart';
 import 'data/chat_message.dart';
@@ -18,17 +19,19 @@ class ChatScreen extends StatelessWidget {
               children: [
                 const SizedBox(height: 64),
                 Container(
-                  padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 70),
+                  padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 80),
                   decoration: BoxDecoration(
                     color: const Color(0x7340E1CD),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Chat with Veggie',
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 36,
-                      fontWeight: FontWeight.w700,
+                    style: GoogleFonts.cormorantGaramond(
+                      textStyle: const TextStyle(
+                        fontSize: 36,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                     semanticsLabel: 'Chat with Veggie Title',
                   ),

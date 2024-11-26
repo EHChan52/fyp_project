@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'shopping_cart.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HeaderWidget extends StatelessWidget {
   const HeaderWidget({super.key});
@@ -7,7 +8,7 @@ class HeaderWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 3),
       decoration: BoxDecoration(
         color: const Color(0x7340E1CD),
         borderRadius: BorderRadius.circular(5),
@@ -15,18 +16,19 @@ class HeaderWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          const Expanded(
+          Expanded(
             child: Text(
               'Green Market',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Cormorant Garamond',
+              style: GoogleFonts.cormorantGaramond(
+                textStyle: const TextStyle(
+                  fontSize: 36,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
               textAlign: TextAlign.center,
             ),
           ),
-            IconButton(
+          IconButton(
             icon: Image.asset(
               'assets/ShoppingCart.png',
               width: 32,
@@ -54,7 +56,7 @@ class HeaderWidget extends StatelessWidget {
                 },
               );
             },
-            ),
+          ),
         ],
       ),
     );

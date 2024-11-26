@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 
 class SectionHeader extends StatelessWidget {
   final String title;
@@ -21,9 +21,11 @@ class SectionHeader extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 34,
-          fontWeight: FontWeight.w700,
+        style: GoogleFonts.cormorantGaramond(
+          textStyle: const TextStyle(
+            fontSize: 34,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );

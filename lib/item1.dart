@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'widgets/profile_header.dart';
 import 'widgets/recipe_card.dart';
 import 'widgets/info_card.dart';
@@ -20,10 +21,13 @@ class VeggieDetailsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   const SizedBox(height: 20),
-                    const Align(
+                  const Align(
                     alignment: Alignment.topRight,
-                    child: ProfileHeader(name: 'Mike', imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc'),
+                    child: ProfileHeader(
+                      name: 'Mike',
+                      imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/774336cd65d0e92c7100b6ed97e664716b56c90de9b8dd8909b4565a88692cde?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
                     ),
+                  ),
                   const SizedBox(height: 19),
                   _buildTitleCard('Avocado'),
                   const SizedBox(height: 19),
@@ -62,7 +66,7 @@ class VeggieDetailsScreen extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: TextStyle(
+        style: GoogleFonts.cormorantGaramond(
           fontSize: 36,
           fontWeight: FontWeight.w700,
         ),
@@ -97,9 +101,9 @@ class VeggieDetailsScreen extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 12),
-          const Text(
+          Text(
             'Fresh Avocado grown from local farm',
-            style: TextStyle(fontSize: 15),
+            style: GoogleFonts.roboto(fontSize: 15),
           ),
         ],
       ),
@@ -111,37 +115,37 @@ class VeggieDetailsScreen extends StatelessWidget {
       constraints: const BoxConstraints(maxWidth: 390),
       padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 36),
       decoration: BoxDecoration(
-      color: const Color(0x7240E1CD),
-      borderRadius: BorderRadius.circular(5),
+        color: const Color(0x7240E1CD),
+        borderRadius: BorderRadius.circular(5),
       ),
       child: TextButton(
-      onPressed: () {
-        // Add your onPressed code here!
-        final snackBar = const SnackBar(
-          content: Text('Avocado is added to your shopping cart'),
-        );
-        ScaffoldMessenger.of(context).showSnackBar(snackBar);
-      },
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-        const Text(
-          'Buy for 200',
-          style: TextStyle(
-          fontSize: 36,
-          fontWeight: FontWeight.w700,
-          color: Colors.black,
-          ),
+        onPressed: () {
+          // Add your onPressed code here!
+          final snackBar = const SnackBar(
+            content: Text('Avocado is added to your shopping cart'),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Buy for 200',
+              style: GoogleFonts.cormorantGaramond(
+                fontSize: 36,
+                fontWeight: FontWeight.w700,
+                color: Colors.black,
+              ),
+            ),
+            const SizedBox(width: 6),
+            Image.asset(
+              'assets/Token.png',
+              width: 20,
+              height: 20,
+              semanticLabel: 'Currency Icon',
+            ),
+          ],
         ),
-        const SizedBox(width: 6),
-        Image.asset(
-          'assets/Token.png',
-          width: 20,
-          height: 20,
-          semanticLabel: 'Currency Icon',
-        ),
-        ],
-      ),
       ),
     );
   }

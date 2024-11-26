@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart' show rootBundle;
-
+import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
@@ -81,11 +81,13 @@ class _LoginScreenState extends State<LoginScreen> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const SizedBox(height: 173),
-                    const Text(
+                    Text(
                       'Welcome Back!',
-                      style: TextStyle(
+                      style: GoogleFonts.borel(
+                        textStyle: const TextStyle(
                         fontSize: 34,
                         color: Colors.black,
+                      ),
                       ),
                       semanticsLabel: 'Welcome Back heading',
                     ),

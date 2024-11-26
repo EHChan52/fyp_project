@@ -3,7 +3,7 @@ import 'widgets/profile_header.dart';
 import 'widgets/event_card.dart';
 import 'widgets/info_card.dart';
 import 'widgets/navigation_bar.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class DinnerEventScreen extends StatelessWidget {
   const DinnerEventScreen({Key? key}) : super(key: key);
 
@@ -62,24 +62,24 @@ class DinnerEventScreen extends StatelessWidget {
       child: Text(
         title,
         textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 36,
-          fontWeight: FontWeight.w700,
+        style: GoogleFonts.cormorantGaramond(
+          fontSize: 33,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
   }
 
-  Widget _buildJoinSection(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      constraints: const BoxConstraints(maxWidth: 390),
-      padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 16),
-      decoration: BoxDecoration(
+Widget _buildJoinSection(BuildContext context) {
+  return Container(
+    width: double.infinity,
+    constraints: const BoxConstraints(maxWidth: 390),
+    padding: const EdgeInsets.symmetric(vertical: 3, horizontal: 16),
+    decoration: BoxDecoration(
       color: const Color(0x7340E1CD),
       borderRadius: BorderRadius.circular(5),
-      ),
-      child: TextButton(
+    ),
+    child: TextButton(
       onPressed: () {
         // Add your onPressed code here!
         final snackBar = const SnackBar(
@@ -90,23 +90,24 @@ class DinnerEventScreen extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-        const Text(
-          'Join for 1000',
-          style: TextStyle(
-          fontSize: 36,
-          fontWeight: FontWeight.w700,
-          color: Colors.black
+          Text(
+            'Join for 1000',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.cormorantGaramond(
+              fontSize: 33,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
           ),
-        ),
-        const SizedBox(width: 8),
-        Image.asset(
-          'assets/Token.png',
-          width: 28,
-          height: 28,
-        ),
+          const SizedBox(width: 8),
+          Image.asset(
+            'assets/Token.png',
+            width: 28,
+            height: 28,
+          ),
         ],
       ),
-      ),
-    );
-  }
+    ),
+  );
+}
 }
