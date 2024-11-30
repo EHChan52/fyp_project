@@ -25,6 +25,14 @@ class ChatMessages extends StatelessWidget {
                 "I hope these suggestions are helpful for you! How do you think these options sound?",
             imagePath: "assets/veggie.png",
           ),
+          _UserMessage(
+            message: "I ate two eggs and 80 grams of bread in the morning. What should I eat for lunch?",
+            imagePath: "assets/ProfileImg.jpeg",
+          ),
+          _BotMessage(
+            message: "Hi~ Hi~ I am your AI chatbot~ You can ask me anything related to health! Aha! I am your super \"healthman\"!!",
+            imagePath: "assets/veggie.png",
+          ),
           SizedBox(height: 200), 
         ],
       ),

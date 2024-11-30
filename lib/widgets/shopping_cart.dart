@@ -44,7 +44,7 @@ class ShoppingCartScreen extends StatelessWidget {
               price: 150,
             ),
             const SizedBox(height: 22),
-            Container(
+            SizedBox(
               height: 50, // Set a fixed height for the container
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

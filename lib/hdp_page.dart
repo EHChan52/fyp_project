@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/profile_header.dart';
 import 'widgets/section_header.dart';
 import 'widgets/list_item.dart';
 

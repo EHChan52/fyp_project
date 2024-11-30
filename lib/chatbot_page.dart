@@ -36,11 +36,11 @@ class ChatScreen extends StatelessWidget {
                     semanticsLabel: 'Chat with Veggie Title',
                   ),
                 ),
-                Expanded(
+                const Expanded(
                   child: Center(
-                    child: Container(
+                    child: SizedBox(
                       width: 390,
-                      child: const ChatMessages(),
+                      child: ChatMessages(),
                     ),
                   ),
                 ),

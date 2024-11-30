@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'widgets/profile_header.dart';
 import 'widgets/recipe_card.dart';
 
 class NutritionalRequirementsScreen extends StatelessWidget {

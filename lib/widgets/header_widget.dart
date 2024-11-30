@@ -40,8 +40,8 @@ class HeaderWidget extends StatelessWidget {
               showDialog(
                 context: context,
                 builder: (BuildContext context) {
-                  return AlertDialog(
-                    content: Container(
+                  return const AlertDialog(
+                    content: SizedBox(
                       width: double.maxFinite,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,

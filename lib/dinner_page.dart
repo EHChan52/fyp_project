@@ -5,7 +5,7 @@ import 'widgets/info_card.dart';
 import 'widgets/navigation_bar.dart';
 import 'package:google_fonts/google_fonts.dart';
 class DinnerEventScreen extends StatelessWidget {
-  const DinnerEventScreen({Key? key}) : super(key: key);
+  const DinnerEventScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +82,7 @@ Widget _buildJoinSection(BuildContext context) {
     child: TextButton(
       onPressed: () {
         // Add your onPressed code here!
-        final snackBar = const SnackBar(
+        const snackBar = SnackBar(
           content: Text('You have joined the dinner successfully!'),
         );
         ScaffoldMessenger.of(context).showSnackBar(snackBar);

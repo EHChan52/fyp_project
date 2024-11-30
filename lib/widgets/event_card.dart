@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class EventCard extends StatelessWidget {
-  const EventCard({Key? key}) : super(key: key);
+  const EventCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,8 +31,8 @@ class EventCard extends StatelessWidget {
                 fit: BoxFit.contain,
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.fromLTRB(11, 8, 55, 8),
+            const Padding(
+              padding: EdgeInsets.fromLTRB(11, 8, 55, 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -42,7 +42,7 @@ class EventCard extends StatelessWidget {
                         Icons.calendar_today,
                         size: 24,
                         ),
-                      const SizedBox(width: 4),
+                      SizedBox(width: 4),
                       Text(
                         '20/10 8:30PM',
                         style: TextStyle(fontSize:20),
@@ -55,7 +55,7 @@ class EventCard extends StatelessWidget {
                         Icons.person,
                         size: 24,
                         ),
-                      const SizedBox(width: 7),
+                      SizedBox(width: 7),
                       Text(
                         '2/4',
                         style: TextStyle(fontSize: 24),

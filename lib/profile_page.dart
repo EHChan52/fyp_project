@@ -7,7 +7,6 @@ import 'issue_page.dart';
 import 'hdp_page.dart';
 import 'nutrition_page.dart';
 
-import 'widgets/profile_header.dart';
 import 'widgets/menu_item.dart';
 import 'widgets/navigation_bar.dart';
 

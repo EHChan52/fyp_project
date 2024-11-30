@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class InfoCard extends StatelessWidget {
-  const InfoCard({Key? key}) : super(key: key);
+  const InfoCard({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class InfoCard extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 13),
-          Expanded(
+          const Expanded(
             child: Text(
               'Avocado is packed with healthy fats, fiber, vitamins and potassium.\nAvocado is used in both sweet and savory dishes',
               style: TextStyle(

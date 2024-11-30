@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'widgets/profile_header.dart';
-import 'widgets/recipe_card.dart';
 import 'widgets/info_card.dart';
 import 'widgets/navigation_bar.dart';
 
 class VeggieDetailsScreen extends StatelessWidget {
-  const VeggieDetailsScreen({Key? key}) : super(key: key);
+  const VeggieDetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -121,7 +120,7 @@ class VeggieDetailsScreen extends StatelessWidget {
       child: TextButton(
         onPressed: () {
           // Add your onPressed code here!
-          final snackBar = const SnackBar(
+          const snackBar = SnackBar(
             content: Text('Avocado is added to your shopping cart'),
           );
           ScaffoldMessenger.of(context).showSnackBar(snackBar);

@@ -3,7 +3,6 @@ import 'widgets/search_bar.dart';
 import 'widgets/section_header.dart';
 import 'widgets/deal_card.dart';
 import 'widgets/navigation_bar.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class CommunityScreen extends StatelessWidget {
   const CommunityScreen({super.key});
