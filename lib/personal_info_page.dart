@@ -19,32 +19,44 @@ class PIScreen extends StatelessWidget {
                   ProfileInfoItem(
                     label: 'Name',
                     value: 'Mike',
-                    onTap: () {},
+                    onTap: () {
+                        
+                      },
                   ),
                   ProfileInfoItem(
                     label: 'Age',
                     value: '24',
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   ),
                   ProfileInfoItem(
                     label: 'Gender',
                     value: 'Male',
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   ),
                   ProfileInfoItem(
                     label: 'Height',
                     value: '180 cm',
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   ),
                   ProfileInfoItem(
                     label: 'Weight',
                     value: '88.60 kg',
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   ),
                   ProfileInfoItem(
                     label: 'Location',
                     value: 'Kowloon Tong',
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   ),
                 ],
               ),

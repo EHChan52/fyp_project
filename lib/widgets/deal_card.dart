@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fyp_project/item1.dart';
+import 'package:fyp_project/dinner_page.dart';
+
 class DealCard extends StatelessWidget {
   final String title;
   final String itemName;
@@ -8,6 +10,7 @@ class DealCard extends StatelessWidget {
   final String imageUrl;
   final double width;
   final double height;
+  final int type;
 
   const DealCard({
     super.key,
@@ -18,6 +21,7 @@ class DealCard extends StatelessWidget {
     required this.imageUrl,
     this.width = 180, // Default width
     this.height = 300, // Default height
+    required this.type,
   });
 
   @override
@@ -39,10 +43,20 @@ class DealCard extends StatelessWidget {
       child: TextButton(
         onPressed: () {
           // Define your onPressed action here
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const VeggieDetailsScreen()),
-          );
+          if(type ==1){
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const DinnerEventScreen()),
+            );
+          }
+          else if(type ==2){
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => VeggieDetailsScreen(
+
+                )),
+            );
+          }
         },
         child: Column(
           mainAxisSize: MainAxisSize.max,

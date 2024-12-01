@@ -57,7 +57,10 @@ class ChatScreen extends StatelessWidget {
                     child: SizedBox(
                       width: 380, 
                       height: 50, 
-                      child: SearchBar1(),
+                      child: SearchBar1(
+                        hint: 'Type a message...',
+                        icon: 2,
+                      ),
                     ),
                   ),
                   SizedBox(height: 8), 

@@ -26,11 +26,11 @@ class ChatMessages extends StatelessWidget {
             imagePath: "assets/veggie.png",
           ),
           _UserMessage(
-            message: "I ate two eggs and 80 grams of bread in the morning. What should I eat for lunch?",
+            message: "Sounds good! I will try to prepare a salad with chicken breast and brown rice for lunch. Thank you!",
             imagePath: "assets/ProfileImg.jpeg",
           ),
           _BotMessage(
-            message: "Hi~ Hi~ I am your AI chatbot~ You can ask me anything related to health! Aha! I am your super \"healthman\"!!",
+            message: "You're welcome! Enjoy your meal! If you have any other questions, feel free to ask me anytime! I am always here to help you!",
             imagePath: "assets/veggie.png",
           ),
           SizedBox(height: 200), 

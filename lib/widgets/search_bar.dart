@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_project/dinner_page.dart';
 
 class SearchBar1 extends StatelessWidget {
-  const SearchBar1({super.key});
+  final String hint;
+  final int icon;
+  const SearchBar1({
+    super.key,
+    required this.hint,
+    required this.icon,
+    });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class SearchBar1 extends StatelessWidget {
           Expanded(
             child: TextField(
               decoration: InputDecoration(
-                hintText: 'Search',
+                hintText: hint,
                 hintStyle: TextStyle(
                   color: Colors.black.withOpacity(0.5),
                   fontSize: 15,
@@ -34,16 +39,13 @@ class SearchBar1 extends StatelessWidget {
               width: 50, 
               height: 60, 
               child: IconButton(
-                icon: const Icon(Icons.search),
+                icon: Icon(icon == 1 ? Icons.search : Icons.send),
                 iconSize: 20,
                 padding: const EdgeInsets.only(bottom:2),
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const DinnerEventScreen()),
-                  );
+                  
                 },
-                tooltip: 'Search',
+                tooltip: hint,
               ),
             ),
           ),

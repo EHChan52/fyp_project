@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'widgets/search_bar.dart';
 import 'widgets/section_header.dart';
+import 'widgets/header_widget.dart';
 import 'widgets/deal_card.dart';
 import 'widgets/navigation_bar.dart';
 
@@ -23,14 +24,17 @@ class CommunityScreen extends StatelessWidget {
                   child: const Column(
                     children: [
                       SizedBox(height: 62),
-                      SectionHeader(title: 'Community'),
+                      HeaderWidget(title: 'Community'),
                       SizedBox(height: 13),
                       Padding(
                         padding: EdgeInsets.symmetric(horizontal: 10),
                         child: SizedBox(
                           width: 380,
                           height: 50,
-                          child: SearchBar1(),
+                          child: SearchBar1(
+                            hint: 'Search...',
+                            icon: 1,
+                          ),
                         ),
                       ),
                       SizedBox(height: 15),
@@ -45,6 +49,7 @@ class CommunityScreen extends StatelessWidget {
                               originalPrice: '1000',
                               discountedPrice: '500',
                               imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/9be4c22c350f32693813bbf361a1b38f0702d540deb10adbca79d1a57b909b77?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                              type: 1,
                             ),
                           ),
                           SizedBox(width: 20),
@@ -55,6 +60,7 @@ class CommunityScreen extends StatelessWidget {
                               originalPrice: '1500',
                               discountedPrice: '1000',
                               imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/db55be97d2b410808f1855b48f835831f1cb98f07085b0b32a534fd9a8ee2ded?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                              type: 1,
                             ),
                           ),
                         ],
@@ -71,6 +77,7 @@ class CommunityScreen extends StatelessWidget {
                               originalPrice: '1200',
                               discountedPrice: '1500',
                               imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/10dc49e5acdb7e6106ee59b1a3a97ff94af3d90ce9cb2ebb5cb7791fd3364d50?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                              type: 1,
                             ),
                           ),
                           SizedBox(width: 20),
@@ -79,6 +86,7 @@ class CommunityScreen extends StatelessWidget {
                               itemName: 'Tai Po 5',
                               discountedPrice: '1250',
                               imageUrl: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e8a35894acd5e786192f88cedd3cedc0a4202517f1478af1edf8a179ba022aca?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
+                              type: 1,
                             ),
                           ),
                         ],

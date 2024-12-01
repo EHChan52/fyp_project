@@ -3,7 +3,12 @@ import 'shopping_cart.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HeaderWidget extends StatelessWidget {
-  const HeaderWidget({super.key});
+  final String title;
+
+  const HeaderWidget({
+    super.key,
+    required this.title,
+    });
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class HeaderWidget extends StatelessWidget {
         children: [
           Expanded(
             child: Text(
-              'Green Market',
+              title,
               style: GoogleFonts.cormorantGaramond(
                 textStyle: const TextStyle(
                   fontSize: 36,
@@ -42,13 +47,10 @@ class HeaderWidget extends StatelessWidget {
                 builder: (BuildContext context) {
                   return const AlertDialog(
                     content: SizedBox(
-                      width: double.maxFinite,
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          // Add your shopping cart widget here
                           ShoppingCartScreen(),
-                          // Example: ShoppingCartWidget(),
                         ],
                       ),
                     ),

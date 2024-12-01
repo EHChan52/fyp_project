@@ -38,12 +38,7 @@ class ShoppingCartScreen extends StatelessWidget {
               price: 150,
             ),
             const SizedBox(height: 22),
-            const CartItem(
-              imagePath: 'https://cdn.builder.io/api/v1/image/assets/TEMP/f2c6623faf1ba339112a21d622cfa4e49877da4b8f7174d389fdd56a389977d2?placeholderIfAbsent=true&apiKey=87d0bb48475c40afad0cba455048b9fc',
-              itemName: 'Asparagus',
-              price: 150,
-            ),
-            const SizedBox(height: 22),
+          
             SizedBox(
               height: 50, // Set a fixed height for the container
               child: Row(
